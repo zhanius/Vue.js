@@ -68,7 +68,7 @@ export default {
       return Math.ceil(this.reviews.length / this.itemsPerPage);
     },
     sortedReviews() {
-      const sorted = [...this.reviews]; // Create a copy to sort
+      const sorted = [...this.reviews]; 
       if (this.sortCriteria === 'date') {
         sorted.sort((a, b) => new Date(b.date) - new Date(a.date));
       } else if (this.sortCriteria === 'rating') {
@@ -104,7 +104,7 @@ export default {
         } else {
           this.reviews = data.fashion_blog_reviews;
         }
-        this.currentPage = 1; // Reset to first page on load
+        this.currentPage = 1; 
       } catch (e) {
         console.log(e);
       }
@@ -178,11 +178,11 @@ export default {
 }
 
 .star {
-  color: gray; /* Серый цвет для незаполненных звезд */
-  font-size: 24px; /* Размер звезд */
+  color: gray; 
+  font-size: 24px; 
 }
 .star.filled {
-  color: gold; /* Желтый цвет для заполненных звезд */
+  color: gold;
 }
 
 .date-name{
